@@ -42,6 +42,8 @@ import SwiftUI
 
 
 struct EventsCalendarView: View {
+    @EnvironmentObject var launchScreenManager: LunchScreenManager
+    
     @EnvironmentObject var eventStore: EventStore
     @State private var dateSelected: DateComponents?
     @State private var displayEvents = false
@@ -128,6 +130,11 @@ struct EventsCalendarView: View {
 //            var noEvent: Int?
 //            print(noEvent ?? NoEvent)
             
+        }.onAppear{
+            DispatchQueue
+                .main.asyncAfter(deadline: .now() + 5){
+                    launchScreenManager.dismiss()
+                }
         }
        // .padding(.top, 0.0)
       //  .padding(-18.0)
@@ -138,5 +145,6 @@ struct EventsCalendarView_Previews: PreviewProvider {
     static var previews: some View {
         EventsCalendarView()
             .environmentObject(EventStore(preview: true))
+            .environmentObject(LunchScreenManager())
     }
 }
