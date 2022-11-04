@@ -12,6 +12,9 @@ import SwiftUI
 struct ListViewRow: View {
     let event: Event
     @Binding var formType: EventFormType?
+    @State var navigated = false
+    
+    @StateObject var myEvents = EventStore(preview: true)
     
     @State var editIsShow = false
     var body: some View {
@@ -29,10 +32,24 @@ struct ListViewRow: View {
             }
             Spacer()
             Button {
-                formType = .update(event)
+                // if 1- edet , more info
+            action: do { self.navigated.toggle() }
+                if editIsShow {
+                    formType = .update(event)
+                }else{
+                   // RiyadhSeason()
+                    NavigationLink("AddCreditCardView", destination: RiyadhSeason(), isActive: $navigated)
+//                    RiyadhSeason()
+//                        .environmentObject(myEvents)
+                    
+                    print("norah page")
+                    
+                    
+                }
+                
             } label: {
                 
-                Text(editIsShow ? "Edit" : "more Info")
+                Text(editIsShow ? "Edit" : "more Infooo")
                 
                 //Text("edit")
             }

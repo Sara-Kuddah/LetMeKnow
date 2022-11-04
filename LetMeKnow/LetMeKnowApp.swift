@@ -9,11 +9,16 @@ import SwiftUI
 
 @main
 struct LetMeKnowApp: App {
+    @StateObject var myEvents = EventStore(preview: true)
     @StateObject var launchScreenManager = LunchScreenManager()
+    
+    
     var body: some Scene {
         WindowGroup {
             ZStack{
-                ContentView()
+                EventsCalendarView()
+                    .environmentObject(myEvents)
+                //ContentView()
                 
                 if launchScreenManager.state != .complated{
                     LaunchScreenView()

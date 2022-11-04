@@ -120,7 +120,8 @@ struct Event: Identifiable {
 //            Event(eventType: .work, date: Date().diff(numDays: -1), note: "Complete Audit."),
 //            Event(eventType: .work, date: Date().diff(numDays: 0), note: "World Vegan Day."), //1NOV
 //            Event(eventType: .sport, date: Date().diff(numDays: -3), note: "Football Game"),
-            
+            //RiyadhSeason
+            Event(date: Date().diff(numDays: -13), note: "Riyadh Season."),//13OCT
             Event(date: Date().diff(numDays: -20), note: "Breast Cancer Awareness."),//13OCT
             Event(date: Date().diff(numDays: 0), note: "World Vegan Day."),//1NOV
             Event(date: Date().diff(numDays: -3), note: "Football Game."),
