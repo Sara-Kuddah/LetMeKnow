@@ -22,6 +22,7 @@ struct LetMeKnowApp: App {
                 
                 if launchScreenManager.state != .complated{
                     LaunchScreenView()
+                        
                 }
                 
             }

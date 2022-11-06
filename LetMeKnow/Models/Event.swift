@@ -124,16 +124,16 @@ struct Event: Identifiable {
             Event(date: Date().diff(numDays: -13), note: "Riyadh Season."),//13OCT
             Event(date: Date().diff(numDays: -20), note: "Breast Cancer Awareness."),//13OCT
             Event(date: Date().diff(numDays: 0), note: "World Vegan Day."),//1NOV
-            Event(date: Date().diff(numDays: -3), note: "Football Game."),
-            Event(date: Date().diff(numDays: -4), note: "Plan for winter vacation."),
-            Event(date: Date().diff(numDays: -2), note: "Plan for winter ."),
+          //Event(date: Date().diff(numDays: -3), note: "Football Game."),
+            Event(eventType: .user, date: Date().diff(numDays: -4), note: "Plan for winter vacation."),
+            Event(eventType: .user, date: Date().diff(numDays: -2), note: "Plan for winter ."),
             Event(date: Date().diff(numDays: 19), note: "Universal Children's Day ."),//20NOV
             Event(date: Date().diff(numDays: 20), note: "FIFA World Cup 2022 ."),
             Event(date: Date().diff(numDays: 24), note: "Black Friday ."),//25Nov
             
             
 //            Event(date: Date().diff(numDays: 2), note: "my bd ."),
-            Event(eventType: .user, date: Date().diff(numDays: 2), note: "Football "),
+            Event(eventType: .user, date: Date().diff(numDays: 2), note: "Personal Event "),
             
             
         ]

@@ -23,7 +23,7 @@ struct RiyadhSeason: View {
                 VStack {
                     
                     
-                    NavigationLink ( "back", destination: EventsCalendarView()
+                    NavigationLink ("", destination: EventsCalendarView()
                     )
                     
                     .foregroundColor(.white)

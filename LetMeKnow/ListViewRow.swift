@@ -15,68 +15,43 @@ struct ListViewRow: View {
     @State var navigated = false
     
     @StateObject var myEvents = EventStore(preview: true)
+    @State private var action: Int? = 0
     
     @State var editIsShow = false
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                HStack {
-                    Text(event.eventType.icon)
-                        .font(.system(size: 40))
-                    Text(event.note)
+        NavigationView {
+            VStack {
+                NavigationLink(destination: RiyadhSeason(), tag: 1, selection: $action) {
+                    Card(event: event, formType: $formType)
                 }
-                Text(
-                    event.date.formatted(date: .abbreviated,
-                                         time: .shortened)
-                )
+//                NavigationLink(destination: RiyadhSeason(), tag: 2, selection: $action) {
+//                    Card(event: event, formType: $formType)
+//                }
+                
+//                Text("Your Custom View 1")
+                    .onTapGesture {
+                        //perform some tasks if needed before opening Destination view
+                        self.action = 1
+                    }
+//                Text("Your Custom View 2")
+//                    .onTapGesture {
+//                        //perform some tasks if needed before opening Destination view
+//                        self.action = 2
+//                    }
             }
-            Spacer()
-            Button {
-                // if 1- edet , more info
-            action: do { self.navigated.toggle() }
-                if editIsShow {
-                    formType = .update(event)
-                }else{
-                   // RiyadhSeason()
-                    NavigationLink("AddCreditCardView", destination: RiyadhSeason(), isActive: $navigated)
-//                    RiyadhSeason()
-//                        .environmentObject(myEvents)
-                    
-                    print("norah page")
-                    
-                    
-                }
-                
-            } label: {
-                
-                Text(editIsShow ? "Edit" : "more Infooo")
-                
-                //Text("edit")
-            }
-            .buttonStyle(.bordered)
-        }.onAppear{
-            ShowEditBtn ()
-        }
+        }.padding(.top, -120)
+        //=======
+        
+        
+        
     }
     
-    func ShowEditBtn ()
-    {
-        if event.eventType == .user
-        {  editIsShow = true
-        }
-            else
-        {
-                editIsShow = false
-            }
-            
-    }
     
+    struct ListViewRow_Previews: PreviewProvider {
+        static let event = Event(eventType: .user, date: Date(), note: "Let's party")
+        static var previews: some View {
+            ListViewRow(event: event, formType: .constant(.new))
+        }
+    }
     
 }
-
- struct ListViewRow_Previews: PreviewProvider {
-     static let event = Event(eventType: .user, date: Date(), note: "Let's party")
-    static var previews: some View {
-        ListViewRow(event: event, formType: .constant(.new))
-    }
- }

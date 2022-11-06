@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D222D4A29164C31009536AE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D222D4929164C31009536AE /* Card.swift */; };
 		4D7E94922913BBD800559B39 /* LaunchScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E94902913BB9C00559B39 /* LaunchScreenManager.swift */; };
 		4D7E94942913BBFE00559B39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E94932913BBFE00559B39 /* ContentView.swift */; };
 		4D7E94962913BC0800559B39 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7E94952913BC0800559B39 /* LaunchScreenView.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D222D4929164C31009536AE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		4D7E94902913BB9C00559B39 /* LaunchScreenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenManager.swift; sourceTree = "<group>"; };
 		4D7E94932913BBFE00559B39 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D7E94952913BC0800559B39 /* LaunchScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				BBCDC1A6286B9B5D002FE328 /* Extensions */,
 				BBCDC18E286B9A7F002FE328 /* Assets.xcassets */,
 				BBCDC190286B9A7F002FE328 /* Preview Content */,
+				4D222D4929164C31009536AE /* Card.swift */,
 			);
 			path = LetMeKnow;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 			files = (
 				BBEAB8E6286CF82E00BF4A75 /* ListViewRow.swift in Sources */,
 				BB9F3A52286C0C0F00664628 /* Event.swift in Sources */,
+				4D222D4A29164C31009536AE /* Card.swift in Sources */,
 				4D7E94942913BBFE00559B39 /* ContentView.swift in Sources */,
 				B3C232FE290EE954003633F9 /* DaysEventsListView.swift in Sources */,
 				4D7E94962913BC0800559B39 /* LaunchScreenView.swift in Sources */,

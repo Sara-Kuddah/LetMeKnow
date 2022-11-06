@@ -61,20 +61,25 @@ struct EventsCalendarView: View {
               
            // }
             .navigationTitle("Calendar View")
-         //   .padding(-37.0)
+            
+            //.padding()
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         formType = .new
                     } label: {
                         Image(systemName: "plus.circle.fill")
-                            .imageScale(.medium)
+                            .imageScale(.large)
+                            .foregroundColor(Color("Colore"))
+                            
+                            
                     }
+                    .padding(.trailing, 9.9)
                 }
             }
 
             VStack() {
-            Capsule().fill(Color.blue.opacity(0.8)).frame(width: 350, height: 4)
+            Capsule().fill(Color("Colore")).frame(width: 350, height: 4)
             }
             
             ScrollView{
