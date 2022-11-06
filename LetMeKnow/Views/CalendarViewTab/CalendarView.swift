@@ -87,6 +87,13 @@ struct CalendarView: UIViewRepresentable {
         view.availableDateRange = interval
         let dateSelection = UICalendarSelectionSingleDate(delegate: context.coordinator)
         view.selectionBehavior = dateSelection
+        //=================
+        view.backgroundColor = UIColor(Color("Colore"))
+        view.overrideUserInterfaceStyle = UIUserInterfaceStyle(ColorScheme.dark)
+        view.tintColor = UIColor(.white)
+       // view.setValue(false, forKeyPath: "highlightsToday")
+       // view.font(.system(size: 40))
+        //=============
         return view
     }
     func makeCoordinator() -> Coordinator {

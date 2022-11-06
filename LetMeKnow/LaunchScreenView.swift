@@ -84,11 +84,20 @@ struct LaunchScreenView: View {
     private extension LaunchScreenView{
         var background: some View{
             Color("launch-screen-backgroud")
+                .ignoresSafeArea()
         }
+            
         var logo:some View{
-            Image("LMKlogo")
-                .scaleEffect(firstPhaseIsAnimating ? 0.6 : 1)
-                .scaleEffect(secondPhaseIsAnimating ? UIScreen.main.bounds.size.height / 4 : 1)
+            VStack{
+                Image("LMKlogo")
+                    .scaleEffect(firstPhaseIsAnimating ? 0.6 : 1)
+                    .scaleEffect(secondPhaseIsAnimating ? UIScreen.main.bounds.size.height / 4 : 1)
+                Text("Let Me Know")
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .padding(.top, 50)
+            }
         }
+       
     }
 

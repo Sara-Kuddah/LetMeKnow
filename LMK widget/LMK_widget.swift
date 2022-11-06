@@ -51,8 +51,13 @@ struct LMK_widgetEntryView : View {
             Text(entry.date, style: .time)
                 .foregroundColor(Color.white)
                 .multilineTextAlignment(.trailing)
-                .padding([.top, .leading], 128.0)
+                .padding(.top,120)
+                .padding(.leading,-153)
                 .frame(height: 30.0)
+                .font(.title)
+                .bold()
+                .foregroundColor(.red)
+            
                 
         }
     }
